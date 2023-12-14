@@ -1,0 +1,133 @@
+version: "3.1"
+
+nlu:
+- intent: make_reservation
+  examples: |
+    - Vreau să fac o rezervare
+    - Aș dori să rezerv o masă
+    - Pot să fac o rezervare?
+    - Rezervare pentru astăzi la ora 19:00
+    - Cum pot face o rezervare?
+    - Aș dori să rezerv pentru două persoane
+    - Am nevoie de o rezervare
+    - Rezervare la restaurant
+
+- intent: greet
+  examples: |
+    - salut
+    - buna
+    - hei
+    - salutare
+    - buna dimineata
+    - buna seara
+    - moin
+    - salutare
+    - hai să mergem
+    - salut, prietene
+    - buna dimineata
+    - buna seara
+    - buna ziua
+
+- intent: goodbye
+  examples: |
+    - la revedere
+    - pa
+    - ne vedem mai tarziu
+    - noapte buna
+    - la revedere
+    - pa-pa
+    - la revedere
+    - sa ai o zi frumoasa
+    - ne vedem pe parcurs
+    - pa pa
+    - la revedere
+
+- intent: affirm
+  examples: |
+    - da
+    - da
+    - desigur
+    - bineînțeles
+    - suna bine
+    - corect
+
+- intent: deny
+  examples: |
+    - nu
+    - n
+    - niciodată
+    - nu cred
+    - nu-mi place asta
+    - nici o șansă
+    - nu prea
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - grozav
+    - uimitor
+    - ma simt ca un rege
+    - minunat
+    - ma simt foarte bine
+    - sunt grozav
+    - sunt uimitor
+    - o să salvez lumea
+    - entuziasmat la maxim
+    - extrem de bine
+    - atât de perfect
+    - atât de bine
+    - atât de perfect
+
+- intent: mood_unhappy
+  examples: |
+    - ziua mea a fost groaznica
+    - sunt trist
+    - nu mă simt foarte bine
+    - sunt dezamăgit
+    - foarte trist
+    - sunt atât de trist
+    - trist
+    - foarte trist
+    - nefericit
+    - nu e bine
+    - nu prea bine
+    - extrem de trist
+    - atât de trist
+    - atât de trist
+
+- intent: bot_challenge
+  examples: |
+    - ești un robot?
+    - ești uman?
+    - vorbesc cu un robot?
+    - vorbesc cu un om?
+
+- intent: inform
+  examples: |
+    - Vreau să rezerv pentru [patru](party_size) persoane
+    - Aș dori o rezervare pentru [doi](party_size) oameni
+    - [Cinci](party_size) persoane pentru rezervare
+    - Rezervare pentru [trei](party_size) persoane
+    - [10 decembrie](reservation_date) pentru rezervare
+    - Prefer [19:00](reservation_time) pentru rezervare
+    - Rezervă o masă vineri la [20:30](reservation_time) pentru [șase](party_size) persoane
+    - [3 ianuarie](reservation_date) la [18:45](reservation_time) pentru [opt](party_size) persoane
+    - [2 februarie](reservation_date) la [19:15](reservation_time) pentru [cinci](party_size) persoane
+    - Numele meu este [Ana Popescu](name)
+    - Sunt [Emma Munteanu](name)
+    - Puteți să mă numiți [Andrei Ionescu](name)
+    - [Mihnea Dumitru](name) este numele meu
+    - Numărul meu de telefon este [0723456789](phone_number)
+    - Contactați-mă la [0768123456](phone_number)
+    - Telefonul meu este [0732123456](phone_number)
+    - Sunați-mă la [0712345678](phone_number)
+    - Numărul meu de telefon este [+40723456789](phone_number)
+    - Contactați-mă la [+40768123456](phone_number)
+    - Telefonul meu este [+40732123456](phone_number)
+    - Sunați-mă la [+40712345678](phone_number)
+
+- intent: out_of_scope
+  examples: |
+    - Cat e 2 + 2
+    - Vreau sa comand mancare
+    - 

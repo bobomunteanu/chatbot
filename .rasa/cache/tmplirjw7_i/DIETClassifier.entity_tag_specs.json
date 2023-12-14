@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-party_size",
+      "2": "I-party_size",
+      "3": "L-party_size",
+      "4": "U-party_size",
+      "5": "B-reservation_date",
+      "6": "I-reservation_date",
+      "7": "L-reservation_date",
+      "8": "U-reservation_date",
+      "9": "B-reservation_time",
+      "10": "I-reservation_time",
+      "11": "L-reservation_time",
+      "12": "U-reservation_time",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-party_size": 1,
+      "I-party_size": 2,
+      "L-party_size": 3,
+      "U-party_size": 4,
+      "B-reservation_date": 5,
+      "I-reservation_date": 6,
+      "L-reservation_date": 7,
+      "U-reservation_date": 8,
+      "B-reservation_time": 9,
+      "I-reservation_time": 10,
+      "L-reservation_time": 11,
+      "U-reservation_time": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

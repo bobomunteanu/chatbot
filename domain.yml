@@ -1,0 +1,108 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - make_reservation
+  - inform
+  - out_of_scope
+
+forms:
+  reservation_form:
+    required_slots:
+      - reservation_date
+      - reservation_time
+      - party_size
+      - name
+      - phone_number
+
+entities:
+  - reservation_date
+  - reservation_time
+  - party_size
+  - name
+  - phone_number
+  
+
+slots:
+  reservation_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: reservation_date
+  reservation_time:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: reservation_time
+  party_size:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: party_size
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+  phone_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: phone_number
+
+responses:
+  utter_greet:
+    - text: "Salut! Cum îți merge?"
+
+  utter_cheer_up:
+    - text: "Iată ceva să te încurajeze:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Ți-a fost de ajutor asta?"
+
+  utter_happy:
+    - text: "Excelent, continuă!"
+
+  utter_goodbye:
+    - text: "Pa"
+
+  utter_iamabot:
+    - text: "Sunt un robot, alimentat de Rasa."
+
+  utter_ask_reservation_date:
+    - text: "In ce data ati dori sa fie rezervarea?"
+
+  utter_ask_reservation_time:
+    - text: "La ce ora ati dori sa fie rezervarea?"
+
+  utter_ask_party_size:
+    - text: "Pentru cate persoane?"
+
+  utter_ask_name:
+    - text: "Pe ce nume ati dori sa fie rezervarea?"
+
+  utter_ask_phone_number:
+    - text: "Care este numarul dumneavoastra de telefon?"
+
+  utter_confirm_reservation:
+    - text: "Am primit detaliile rezervării. Vă rog să confirmați."
+
+  utter_reservation_confirmed:
+    - text: "Rezervarea dvs. a fost confirmată. Așteptăm cu nerăbdare să vă întâmpinăm!"
+
+  utter_slots_values:
+    - text: "Perfect! Voi face o rezervare pe numele {name}, cu numarul de telefon {phone_number}, pentru {party_size} persoane in data de {reservation_date} la ora {reservation_time}."
+
+  utter_out_of_scope:
+  - text: "Scuze, nu te pot ajuta cu asta."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
