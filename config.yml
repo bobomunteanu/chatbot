@@ -11,6 +11,11 @@ assistant_id: 20231214-001320-dry-vial
 language: en
 
 pipeline:
+  - name: "DucklingEntityExtractor"
+    dimensions: ["time", "number"]
+    timezone: "Europe/Bucharest"  # Use your timezone
+    locale: "ro_RO"  # Use your locale
+    url: "http://localhost:8000"
   - name: WhitespaceTokenizer
   - name: CountVectorsFeaturizer
   - name: DIETClassifier
@@ -19,8 +24,11 @@ pipeline:
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.8
     ambiguity_threshold: 0.1
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+
 
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
@@ -53,3 +61,9 @@ policies:
     epochs: 100
     constrain_similarities: true
   - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: True
+
+logging:
+  level: DEBUG

@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-name",
+      "2": "I-name",
+      "3": "L-name",
+      "4": "U-name",
+      "5": "B-party_size",
+      "6": "I-party_size",
+      "7": "L-party_size",
+      "8": "U-party_size",
+      "9": "B-phone_number",
+      "10": "I-phone_number",
+      "11": "L-phone_number",
+      "12": "U-phone_number",
+      "13": "B-reservation_date",
+      "14": "I-reservation_date",
+      "15": "L-reservation_date",
+      "16": "U-reservation_date",
+      "17": "B-reservation_time",
+      "18": "I-reservation_time",
+      "19": "L-reservation_time",
+      "20": "U-reservation_time",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-name": 1,
+      "I-name": 2,
+      "L-name": 3,
+      "U-name": 4,
+      "B-party_size": 5,
+      "I-party_size": 6,
+      "L-party_size": 7,
+      "U-party_size": 8,
+      "B-phone_number": 9,
+      "I-phone_number": 10,
+      "L-phone_number": 11,
+      "U-phone_number": 12,
+      "B-reservation_date": 13,
+      "I-reservation_date": 14,
+      "L-reservation_date": 15,
+      "U-reservation_date": 16,
+      "B-reservation_time": 17,
+      "I-reservation_time": 18,
+      "L-reservation_time": 19,
+      "U-reservation_time": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

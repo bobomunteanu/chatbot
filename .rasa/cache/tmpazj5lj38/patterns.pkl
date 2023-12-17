@@ -1,0 +1,14 @@
+[
+  {
+    "name": "party_size",
+    "pattern": "(\\bpatru\\b|\\bcinci\\b|\\buna\\b|\\b4\\b|\\bdoisprezece\\b|\\b7\\b|\\b9\\b)"
+  },
+  {
+    "name": "reservation_time",
+    "pattern": "(\\b19:00\\b|\\b20:30\\b|\\b21:45\\b)"
+  },
+  {
+    "name": "reservation_date",
+    "pattern": "(\\bazi\\b|\\bastazi\\b|\\bmaine\\b|\\bpoimaine\\b|\\bin\\ 2\\ zile\\b|\\bin\\ 3\\ zile\\b|\\bin\\ 4\\ zile\\b|\\b21\\ noiembrie\\b|\\b22\\ iunie\\b)"
+  }
+]

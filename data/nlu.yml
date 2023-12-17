@@ -106,28 +106,59 @@ nlu:
   examples: |
     - Vreau să rezerv pentru [patru](party_size) persoane
     - Aș dori o rezervare pentru [doi](party_size) oameni
+    - As vrea sa fac o rezervare pentru[4](party_size) la ora [19:00]
     - [Cinci](party_size) persoane pentru rezervare
     - Rezervare pentru [trei](party_size) persoane
     - [10 decembrie](reservation_date) pentru rezervare
     - Prefer [19:00](reservation_time) pentru rezervare
+    - Rezervare pentru [ora 20:00](reservation_time)
+    - La [18:45](reservation_time) pentru rezervare
+    - [19:15](reservation_time) pentru [cinci](party_size) persoane
     - Rezervă o masă vineri la [20:30](reservation_time) pentru [șase](party_size) persoane
     - [3 ianuarie](reservation_date) la [18:45](reservation_time) pentru [opt](party_size) persoane
     - [2 februarie](reservation_date) la [19:15](reservation_time) pentru [cinci](party_size) persoane
-    - Numele meu este [Ana Popescu](name)
+    - Aș dori o rezervare pentru [patru](party_size) persoane
+    - Rezervare pentru [șase](party_size) persoane
+    - [Doi](party_size) oameni pentru rezervare
+    - Pentru [opt](party_size) persoane aș vrea să rezerv
+    - [Cinci](party_size)
     - Sunt [Emma Munteanu](name)
-    - Puteți să mă numiți [Andrei Ionescu](name)
     - [Mihnea Dumitru](name) este numele meu
     - Numărul meu de telefon este [0723456789](phone_number)
-    - Contactați-mă la [0768123456](phone_number)
-    - Telefonul meu este [0732123456](phone_number)
-    - Sunați-mă la [0712345678](phone_number)
-    - Numărul meu de telefon este [+40723456789](phone_number)
-    - Contactați-mă la [+40768123456](phone_number)
-    - Telefonul meu este [+40732123456](phone_number)
-    - Sunați-mă la [+40712345678](phone_number)
+    - [0768123456](phone_number)
+    - [+40712345678](phone_number)
+
+- lookup: party_size
+  examples: |
+    - patru
+    - cinci
+    - una
+    - 4
+    - doisprezece
+    - 7
+    - 9
+
+- lookup: reservation_time
+  examples: |
+    - 19:00
+    - 20:30
+    - 21:45
+
+- lookup: reservation_date
+  examples: |
+    - azi
+    - astazi
+    - maine
+    - poimaine
+    - in 2 zile
+    - in 3 zile
+    - in 4 zile
+    - 21 noiembrie
+    - 22 iunie
+    
 
 - intent: out_of_scope
   examples: |
     - Cat e 2 + 2
     - Vreau sa comand mancare
-    - 
+    - Ce e aia o floare?

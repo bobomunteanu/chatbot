@@ -11,6 +11,8 @@ intents:
   - make_reservation
   - inform
   - out_of_scope
+  - default
+  - redo_phone_number
 
 forms:
   reservation_form:
@@ -27,7 +29,8 @@ entities:
   - party_size
   - name
   - phone_number
-  
+  - time
+  - number
 
 slots:
   reservation_date:
@@ -102,6 +105,15 @@ responses:
 
   utter_out_of_scope:
   - text: "Scuze, nu te pot ajuta cu asta."
+
+  utter_default:
+    - text: "Nu am inteles ce ai vrut sa zici. Poti reformula?"
+
+  utter_redo_phone_number:
+    - text: "Formatul numarului de telefon este invalid. Te rog sa introduci un numar valid."
+
+actions:
+- validate_reservation_form
 
 session_config:
   session_expiration_time: 60
