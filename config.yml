@@ -24,7 +24,7 @@ pipeline:
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.8
+    threshold: 0.1
     ambiguity_threshold: 0.1
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
@@ -61,7 +61,7 @@ policies:
     epochs: 100
     constrain_similarities: true
   - name: RulePolicy
-    core_fallback_threshold: 0.4
+    core_fallback_threshold: 0.2
     core_fallback_action_name: "action_default_fallback"
     enable_fallback_prediction: True
 

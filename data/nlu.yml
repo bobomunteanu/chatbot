@@ -106,17 +106,17 @@ nlu:
   examples: |
     - Vreau să rezerv pentru [patru](party_size) persoane
     - Aș dori o rezervare pentru [doi](party_size) oameni
-    - As vrea sa fac o rezervare pentru[4](party_size) la ora [19:00]
+    - As vrea sa fac o rezervare pentru [4](party_size) la ora [19:00]
     - [Cinci](party_size) persoane pentru rezervare
     - Rezervare pentru [trei](party_size) persoane
-    - [10 decembrie](reservation_date) pentru rezervare
+    - [2023-11-18T00:00:00.000+02:00](time) pentru rezervare
     - Prefer [19:00](reservation_time) pentru rezervare
     - Rezervare pentru [ora 20:00](reservation_time)
     - La [18:45](reservation_time) pentru rezervare
     - [19:15](reservation_time) pentru [cinci](party_size) persoane
     - Rezervă o masă vineri la [20:30](reservation_time) pentru [șase](party_size) persoane
-    - [3 ianuarie](reservation_date) la [18:45](reservation_time) pentru [opt](party_size) persoane
-    - [2 februarie](reservation_date) la [19:15](reservation_time) pentru [cinci](party_size) persoane
+    - [2023-12-18T00:00:00.000+02:00](time) la [18:45](reservation_time) pentru [opt](party_size) persoane
+    - [2024-01-18T00:00:00.000+02:00](time) la [19:15](reservation_time) pentru [cinci](party_size) persoane
     - Aș dori o rezervare pentru [patru](party_size) persoane
     - Rezervare pentru [șase](party_size) persoane
     - [Doi](party_size) oameni pentru rezervare
@@ -138,23 +138,11 @@ nlu:
     - 7
     - 9
 
-- lookup: reservation_time
+- lookup: time
   examples: |
-    - 19:00
-    - 20:30
-    - 21:45
-
-- lookup: reservation_date
-  examples: |
-    - azi
-    - astazi
-    - maine
-    - poimaine
-    - in 2 zile
-    - in 3 zile
-    - in 4 zile
-    - 21 noiembrie
-    - 22 iunie
+    - 2023-12-18T00:00:00.000+02:00
+    - 2024-11-18T00:00:00.000+02:00
+    - 2023-09-18T00:00:00.000+02:00
     
 
 - intent: out_of_scope

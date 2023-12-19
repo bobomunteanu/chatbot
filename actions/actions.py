@@ -11,18 +11,18 @@ nlp = spacy.load('ro_core_news_sm')
 import re
 
 
-class ReservationForm(Action):
-    def name(self) -> Text:
-        return "reservation_form"
-
-    def run(
-            self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
-    ) -> List[Dict[Text, Any]]:
-        # Logic to fill slots, extract entities, etc.
-
-        dispatcher.utter_message(response="utter_slots_values")  # Custom response
-
-        return []
+# class ReservationForm(Action):
+#     def name(self) -> Text:
+#         return "reservation_form"
+#
+#     def run(
+#             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+#     ) -> List[Dict[Text, Any]]:
+#         # Logic to fill slots, extract entities, etc.
+#
+#         dispatcher.utter_message(response="utter_slots_values")  # Custom response
+#
+#         return []
 
 
 class ValidateRestaurantForm(FormValidationAction):
@@ -63,29 +63,17 @@ class ValidateRestaurantForm(FormValidationAction):
             dispatcher.utter_message(response="utter_redo_phone_number")
             return {"phone_number": None}
 
-    # def validate_reservation_date(
-    #     self,
-    #     slot_value: Any,
-    #     dispatcher: CollectingDispatcher,
-    #     tracker: Tracker,
-    #     domain: DomainDict,
-    # ) -> Dict[Text, Any]:
-    #     date = slot_value
-    #     print(date)
-    #
-    #     return {"reservation_date": date}
-
-    def validate_reservation_time(
+    def validate_time(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict,
     ) -> Dict[Text, Any]:
-        """Validate cuisine value."""
-        time = parse_time(slot_value)
+        date = slot_value
+        print(date)
 
-        return {"reservation_time": time}
+        return {"time": date}
 
     def validate_party_size(
         self,

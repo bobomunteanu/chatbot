@@ -17,27 +17,26 @@ intents:
 forms:
   reservation_form:
     required_slots:
-      - reservation_date
+      - time
       - reservation_time
       - party_size
       - name
       - phone_number
 
 entities:
-  - reservation_date
+  - time
   - reservation_time
   - party_size
   - name
   - phone_number
-  - time
   - number
 
 slots:
-  reservation_date:
+  time:
     type: text
     mappings:
       - type: from_entity
-        entity: reservation_date
+        entity: time
   reservation_time:
     type: text
     mappings:
@@ -79,7 +78,7 @@ responses:
   utter_iamabot:
     - text: "Sunt un robot, alimentat de Rasa."
 
-  utter_ask_reservation_date:
+  utter_ask_time:
     - text: "In ce data ati dori sa fie rezervarea?"
 
   utter_ask_reservation_time:
@@ -101,7 +100,7 @@ responses:
     - text: "Rezervarea dvs. a fost confirmată. Așteptăm cu nerăbdare să vă întâmpinăm!"
 
   utter_slots_values:
-    - text: "Perfect! Voi face o rezervare pe numele {name}, cu numarul de telefon {phone_number}, pentru {party_size} persoane in data de {reservation_date} la ora {reservation_time}."
+    - text: "Perfect! Voi face o rezervare pe numele {name}, cu numarul de telefon {phone_number}, pentru {party_size} persoane in data de {time} la ora {reservation_time}."
 
   utter_out_of_scope:
   - text: "Scuze, nu te pot ajuta cu asta."

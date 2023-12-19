@@ -1,0 +1,6 @@
+[
+  {
+    "name": "party_size",
+    "pattern": "(\\bpatru\\b|\\bcinci\\b|\\buna\\b|\\b4\\b|\\bdoisprezece\\b|\\b7\\b|\\b9\\b)"
+  }
+]
